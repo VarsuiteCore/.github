@@ -1,0 +1,95 @@
+{
+  "enabled": true,
+  "extends": [
+    "config:recommended",
+    "docker:disable",
+    "group:allNonMajor",
+    ":automergeMinor",
+    ":automergePr",
+    ":automergeRequireAllStatusChecks",
+    ":combinePatchMinorReleases",
+    ":prConcurrentLimit10",
+    ":prImmediately",
+    ":rebaseStalePrs",
+    ":renovatePrefix",
+    ":separateMultipleMajorReleases"
+  ],
+  "additionalReviewers": ["Jamesking56"],
+  "dependencyDashboardAutoclose": true,
+  "ignoreDeps": [
+    "mariadb"
+  ],
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch", "digest"],
+      "automerge": true
+    },
+    {
+      "updateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    },
+    {
+      "matchDepNames": ["php"],
+      "enabled": false
+    },
+    {
+      "packagePatterns": [
+        "^larastan/larastan",
+        "^phpstan/"
+      ],
+      "groupName": "phpstan packages",
+      "groupSlug": "phpstan"
+    },
+    {
+      "matchPackagePatterns": ["laravel/framework"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "depTypeList": ["action"],
+      "extractVersion": "^(?<version>v\\d+\\.\\d+\\.\\d+)$",
+      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$"
+    },
+    {
+      "packagePatterns": [
+        "^@inertiajs/inertia.*$"
+      ],
+      "groupName": "inertia"
+    },
+    {
+      "packagePatterns": [
+        "^pestphp/.*$"
+      ],
+      "groupName": "pest"
+    },
+    {
+      "packagePatterns": [
+        "^vite",
+        "laravel-vite-plugin",
+        "^@vitejs/.*$"
+      ],
+      "groupName": "vite",
+      "groupSlug": "vite"
+    }
+  ],
+  "platformAutomerge": true,
+  "rangeStrategy": "update-lockfile",
+  "rollbackPrs": true,
+  "schedule": [
+    "after 9am every weekday",
+    "before 5pm every weekday"
+  ],
+  "timezone": "Europe/London",
+  "transitiveRemediation": true,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"],
+    "schedule": "at any time",
+    "transitiveRemediation": true
+  }
+}
