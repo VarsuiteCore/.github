@@ -81,8 +81,10 @@
   "rangeStrategy": "update-lockfile",
   "rollbackPrs": true,
   "schedule": [
-    "after 9am every weekday",
-    "before 5pm every weekday"
+    "after 5pm every weekday",
+    "before 11:59pm every weekday",
+    "after 9am every weekend",
+    "before 11:59pm every weekend"
   ],
   "timezone": "Europe/London",
   "transitiveRemediation": true,
