@@ -80,12 +80,7 @@
   "platformAutomerge": true,
   "rangeStrategy": "update-lockfile",
   "rollbackPrs": true,
-  "schedule": [
-    "after 5pm every weekday",
-    "before 11:59pm every weekday",
-    "after 9am every weekend",
-    "before 11:59pm every weekend"
-  ],
+  "schedule": ["* 9-23 * * 6-7", "* 17-23 * * 1-5"],
   "timezone": "Europe/London",
   "transitiveRemediation": true,
   "vulnerabilityAlerts": {
