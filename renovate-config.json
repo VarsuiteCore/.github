@@ -83,7 +83,7 @@
   "prCreation": "not-pending",
   "rangeStrategy": "update-lockfile",
   "rollbackPrs": true,
-  "schedule": ["* 9-23 * * 6-7", "* 17-23 * * 1-5"],
+  "schedule": ["* 9-23 * * 7"],
   "timezone": "Europe/London",
   "transitiveRemediation": true,
   "vulnerabilityAlerts": {
