@@ -5,6 +5,8 @@
     "docker:disable",
     "group:allNonMajor",
     "helpers:pinGitHubActionDigestsToSemver",
+    "security:minimumReleaseAgeNpm",
+    "security:openssf-scorecard",
     ":automergeMinor",
     ":automergePr",
     ":automergeRequireAllStatusChecks",
