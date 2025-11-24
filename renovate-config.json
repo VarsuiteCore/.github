@@ -12,6 +12,7 @@
     ":automergePr",
     ":automergeRequireAllStatusChecks",
     ":combinePatchMinorReleases",
+    ":configMigration",
     ":prConcurrentLimit10",
     ":prImmediately",
     ":rebaseStalePrs",
