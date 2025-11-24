@@ -4,6 +4,7 @@
     "config:recommended",
     "docker:disable",
     "group:allNonMajor",
+    "helpers:pinGitHubActionDigestsToSemver",
     ":automergeMinor",
     ":automergePr",
     ":automergeRequireAllStatusChecks",
@@ -51,11 +52,6 @@
       "matchPackagePatterns": ["laravel/framework"],
       "matchUpdateTypes": ["major"],
       "enabled": false
-    },
-    {
-      "depTypeList": ["action"],
-      "extractVersion": "^(?<version>v\\d+\\.\\d+\\.\\d+)$",
-      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$"
     },
     {
       "packagePatterns": [
