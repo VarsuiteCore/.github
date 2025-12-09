@@ -20,6 +20,9 @@
     ":separateMultipleMajorReleases"
   ],
   "additionalReviewers": ["Jamesking56"],
+  "constraints": {
+    "php": "<= 8.4.15"
+  },
   "dependencyDashboardAutoclose": true,
   "ignoreDeps": [
     "mariadb"
