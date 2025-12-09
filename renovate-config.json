@@ -83,7 +83,6 @@
     }
   ],
   "platformAutomerge": true,
-  "prCreation": "not-pending",
   "rangeStrategy": "update-lockfile",
   "rollbackPrs": true,
   "schedule": ["* 9-23 * * 7"],
